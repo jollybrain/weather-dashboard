@@ -10,9 +10,9 @@ const App = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+        const apiKey = 'https://api.api-ninjas.com/v1/weather'; 
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+          `https://api.api-ninjas.com/v1/weather?city=`
         );
         console.log(response.data); // Log the data to ensure it's received
         setWeatherData(response.data);
@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-pink-500 via-yellow-500 to-blue-500 flex items-center justify-center">
-      <div className="w-full max-w-md p-4">
+      <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
         {/* City Input */}
         <input
           type="text"
