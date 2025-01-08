@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import WeatherCard from './components/WeatherCard';
 
+
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [city, setCity] = useState('New York');
@@ -10,7 +11,7 @@ const App = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const apiKey = 'https://api.api-ninjas.com/v1/weather'; 
+        const apiKey = '4nDSTxJOznW+ZAxM/xCSkA==9bYVHON19olvLhDf'; 
         const response = await axios.get(
           `https://api.api-ninjas.com/v1/weather?city=`
         );
