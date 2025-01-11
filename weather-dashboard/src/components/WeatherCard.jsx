@@ -2,12 +2,12 @@ import React from 'react';
 
 const WeatherCard = ({ weather }) => {
   return (
-    <div className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 p-6 rounded-lg shadow-lg text-white">
-      <h2 className="text-3xl font-bold">{weather.name}</h2>
-      <p className="text-xl mt-2">{weather.weather[0].description}</p>
-      <p className="text-2xl mt-4">Temperature: {weather.main.temp}°C</p>
-      <p className="text-lg">Humidity: {weather.main.humidity}%</p>
-      <p className="text-lg">Wind Speed: {weather.wind.speed} m/s</p>
+    <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md text-center">
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">{weather.city || 'City'}</h2>
+      <p className="text-lg text-gray-600">Temperature: <span className="font-semibold">{weather.temp}°C</span></p>
+      <p className="text-lg text-gray-600">Humidity: <span className="font-semibold">{weather.humidity}%</span></p>
+      <p className="text-lg text-gray-600">Wind Speed: <span className="font-semibold">{weather.wind_speed} m/s</span></p>
+      <p className="text-lg text-gray-600">Conditions: <span className="font-semibold">{weather.conditions}</span></p>
     </div>
   );
 };
